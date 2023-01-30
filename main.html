@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+{%block title%}
+	<title>Main page</title>
+{%endblock%}
+{%block content%}
+	<h2> <center>Это главная страница</center> </h2>
+	<h3><center>Категории </center> </h3>
+	<center>
+	{% for c in categories %}
+	<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{c.name}}</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+       
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="category/{{c.category_id}}" class="btn btn-primary">Перейти</a>
+      </div>
+    </div>
+   </div>
+   <div>
+	{%endfor%}
+</center>
+{%endblock%}

@@ -1,0 +1,15 @@
+{% extends 'main/base.html' %}
+{% block title %}
+	<title>Info</title>
+{% endblock %}
+{% block content %}
+	<h2> Contact page </h2>
+	<form>
+		{% crsf_token %}
+		{{ form.name }}
+		{{ form.phone }}
+		{{ form.comment }
+		<button type="submit"></button>
+		}
+	</form>
+{%endblock%}
